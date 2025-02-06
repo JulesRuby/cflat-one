@@ -11,20 +11,20 @@ namespace creatingClasses
         // Constants (if applciable)
         // Fields
         // Do I need to place these in here, if they are implcitly generated when I declare the properties?
-        int personId;
-        string firstName;
-        string lastName;
-        string favoriteColour;
-        int age;
-        bool isWorking;
+        //public int personId;
+        //public string firstName;
+        //public string lastName;
+        //public string favoriteColour;
+        //public int age;
+        //public bool isWorking;
 
         // Properties
         public int PersonId { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string FavoriteColor { get; set; }
-        public int Age{ get; set; }
-        public bool IsWorking{ get; set; }
+        public int Age { get; set; }
+        public bool IsWorking { get; set; }
 
         // Constructors
         public Person (int personId, string firstName, string lastName, string favoriteColor, int age, bool isWorking)
@@ -41,25 +41,26 @@ namespace creatingClasses
         // Public Methods
 
         // Do I really need to make it accept these attributes when they are literally already in the object??
-        public void displayPersonInfo(int personId, string firstName, string lastName, string firstColor)
+        //public void displayPersonInfo(int personId, string firstName, string lastName, string firstColor)
+        public void displayPersonInfo()
         {
             // Instructions feel a little bit unclear here, better ask mehdi to clarify
-            string fullName = firstName + lastName;
+            string fullName = FirstName + LastName;
 
-            Console.WriteLine($"{personId}: {fullName}'s favorite color is {favoriteColour}");
+            Console.WriteLine($"{PersonId}: {fullName}'s favorite color is {FavoriteColor}");
         }
 
         // Setting a default to white, so it fulfills the rubric if nohing is passed in but has the potential to be useful otherwise
         public void changeFavoriteColor(string newColor = "White") 
         {
-            string changeOuputString = $"Favorite color changed from {favoriteColour} to {newColor}!";
+            string changeOuputString = $"Favorite color changed from {FavoriteColor} to {newColor}!";
             FavoriteColor = newColor;
         }
 
         public void getAgeInTenYears()
         {
             // This may throw an error because I'm not certain that string interpolation will implicitly cast other data types to strings
-            Console.WriteLine($"{firstName + lastName}'s age in ten years will be {age + 10}");
+            Console.WriteLine($"{FirstName + LastName}'s age in ten years will be {Age + 10}");
         }
 
         // Asks to display all the person's Object information as a list. I need to ask a couple of question about this also:
@@ -73,5 +74,5 @@ namespace creatingClasses
         // Private Methods
         }
 
-    }
+   
 }
