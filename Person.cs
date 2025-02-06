@@ -46,7 +46,22 @@ namespace creatingClasses
         // Setting a default to white, so it fulfills the rubric if nohing is passed in but has the potential to be useful otherwise
         public void changeFavoriteColor(string newColor = "white") 
         {
+            string changeOuputString = $"Favorite color changed from {favoriteColour} to {newColor}!";
+            FavoriteColor = newColor;
+        }
 
+        public void getAgeInTenYears()
+        {
+            // This may throw an error because I'm not certain that string interpolation will implicitly cast other data types to strings
+            Console.WriteLine($"{firstName + lastName}'s age in ten years will be {age + 10}");
+        }
+
+        // Asks to display all the person's Object information as a list. I need to ask a couple of question about this also:
+        // Do they just mean a cvomma separated list? or like a List class object.
+        // Also, when they ask to display all "Person Object Information", do they mean for me to include the methods?
+        public void toString()
+        {
+            Console.WriteLine(this.ToString); // Lol will this do?
         }
 
         // Private Methods
