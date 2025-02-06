@@ -27,24 +27,30 @@ namespace creatingClasses
         public bool IsWorking{ get; set; }
 
         // Constructors
+        public Person (int personId, string firstName, string lastName, string favoriteColor, int age, bool isWorking)
+        {
+            PersonId = personId;
+            FirstName = firstName;
+            LastName = lastName;
+            FavoriteColor = favoriteColor;
+            Age = age;
+            IsWorking = isWorking;
+        }
 
 
         // Public Methods
 
+        // Do I really need to make it accept these attributes when they are literally already in the object??
         public void displayPersonInfo(int personId, string firstName, string lastName, string firstColor)
         {
             // Instructions feel a little bit unclear here, better ask mehdi to clarify
-            string name = firstName + lastName;
+            string fullName = firstName + lastName;
 
-            Console.WriteLine(
-                $"Name: {name}\n" +
-                $"Person ID: {personId}\n" +
-                $"{name}'s favorite color is {favoriteColor}"
-                );
+            Console.WriteLine($"{personId}: {fullName}'s favorite color is {favoriteColour}");
         }
 
         // Setting a default to white, so it fulfills the rubric if nohing is passed in but has the potential to be useful otherwise
-        public void changeFavoriteColor(string newColor = "white") 
+        public void changeFavoriteColor(string newColor = "White") 
         {
             string changeOuputString = $"Favorite color changed from {favoriteColour} to {newColor}!";
             FavoriteColor = newColor;
