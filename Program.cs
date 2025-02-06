@@ -12,6 +12,16 @@
             Person person4 = new Person(4, "Mary", "Beals", "Yellow", 28, true);
 
             person1.displayPersonInfo();
+            person3.toString();
+            person1.changeFavoriteColor();
+            person1.displayPersonInfo();
+            person4.getAgeInTenYears();
+
+            Relation relation1 = new Relation(RelationshipTypes.Sister);
+            Relation relation2 = new Relation(RelationshipTypes.Brother);
+
+            relation1.showRelationshipType(person2, person4);
+            relation1.showRelationshipType(person1, person3);
 
             Console.ReadLine();
         }
