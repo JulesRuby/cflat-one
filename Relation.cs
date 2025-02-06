@@ -9,7 +9,7 @@ namespace creatingClasses
         public string relationshipType;
 
         // properties
-        public string RelationshipType { get; set; };
+        public string RelationshipType { get; set; }
 
         // constructor
         public Relation(string relationshipType)
