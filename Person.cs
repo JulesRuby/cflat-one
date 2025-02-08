@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
 namespace creatingClasses
@@ -10,14 +11,6 @@ namespace creatingClasses
     {
         // Constants (if applciable)
         // Fields
-        // Do I need to place these in here, if they are implcitly generated when I declare the properties?
-        //public int personId;
-        //public string firstName;
-        //public string lastName;
-        //public string favoriteColour;
-        //public int age;
-        //public bool isWorking;
-
         // Properties
         public int PersonId { get; set; }
         public string FirstName { get; set; }
@@ -26,9 +19,11 @@ namespace creatingClasses
         public int Age { get; set; }
         public bool IsWorking { get; set; }
 
-        // Constructors
+        // Let's see if I can use this to make a list from a json file. 
+        //[JsonConstructor]
         public Person (int personId, string firstName, string lastName, string favoriteColor, int age, bool isWorking)
         {
+            Console.WriteLine($"{personId}, {firstName}, {lastName}, {favoriteColor}, {age}, {isWorking}");
             PersonId = personId;
             FirstName = firstName;
             LastName = lastName;
@@ -38,16 +33,10 @@ namespace creatingClasses
         }
 
 
-        // Public Methods
-
-        // Do I really need to make it accept these attributes when they are literally already in the object??
-        //public void displayPersonInfo(int personId, string firstName, string lastName, string firstColor)
         public void displayPersonInfo()
         {
-            // Instructions feel a little bit unclear here, better ask mehdi to clarify
-            string fullName = $"{FirstName} {LastName}";
-
-            Console.WriteLine($"{PersonId}: {fullName}'s favorite color is {FavoriteColor}\n");
+            // I'm just going to use interpolation instead of creating a new variable for fullname
+            Console.WriteLine($"{PersonId}: {FirstName} {LastName}'s favorite color is {FavoriteColor}\n");
         }
 
         // Setting a default to white, so it fulfills the rubric if nohing is passed in but has the potential to be useful otherwise

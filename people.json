@@ -1,0 +1,34 @@
+[
+    {
+        "personId": 1,
+        "firstName": "Ian",
+        "lastName": "Brooks",
+        "favoriteColor": "Red",
+        "age": 30,
+        "isWorking": true
+    },
+    {
+        "personId": 2,
+        "firstName": "Gina",
+        "lastName": "James",
+        "favoriteColor": "Green",
+        "age": 18,
+        "isWorking": false
+    },
+    {
+        "personId": 3,
+        "firstName": "Mike",
+        "lastName": "Briscoe",
+        "favoriteColor": "Blue",
+        "age": 45,
+        "isWorking": true
+    },
+    {
+        "personId": 4,
+        "firstName": "Mary",
+        "lastName": "Beals",
+        "favoriteColor": "Yellow",
+        "age": 28,
+        "isWorking": true
+    }
+]
